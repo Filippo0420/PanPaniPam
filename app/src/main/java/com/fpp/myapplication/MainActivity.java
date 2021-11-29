@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
     public void dalej(View view){
         EditText imie = findViewById(R.id.imie);
 
-        Intent intentPan = new Intent(MainActivity.this, PaniActivity.class);
-        Intent intentPani = new Intent(MainActivity.this, PanActivity.class);
+        Intent intentPani = new Intent(MainActivity.this, PaniActivity.class);
+        Intent intentPan = new Intent(MainActivity.this, PanActivity.class);
 
         String imieS = imie.getText().toString();
 
@@ -52,10 +52,12 @@ public class MainActivity extends AppCompatActivity {
             validateName(imieS);
 
             if(pani){
+                intentPani.putExtra("name", imieS);
                 startActivity(intentPani);
             }
 
             if(pan){
+                intentPan.putExtra("name", imieS);
                 startActivity(intentPan);
             }
         }else{
@@ -67,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void validateName(String Name) {
-        if(Name.matches(".{2,}a")){
+        if(Name.matches(".*a")){
             pani = true;
         }else{
             pan = true;

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textimie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Podaj imie: "
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/imie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textimie"/>
+
+    <TextView
+        android:id="@+id/czyrobottext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imie"
+        android:text="Nie jestem robotem"
+        android:textSize="24sp"/>
+
+    <CheckBox
+        android:id="@+id/czyRobot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/czyrobottext"
+        android:layout_below="@id/imie"/>
+
+    <Button
+        android:id="@+id/dalej"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/czyRobot"
+        android:text="dalej"
+        android:layout_centerHorizontal="true"
+        android:onClick="dalej"/>
+
+</RelativeLayout>

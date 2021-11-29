@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class PanActivity extends AppCompatActivity {
@@ -25,6 +26,10 @@ public class PanActivity extends AppCompatActivity {
             imie.setText(j);
         }
 
+
+    }
+
+    public void dalejResultPan(View view){
 
     }
 }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class PaniActivity extends AppCompatActivity {
@@ -24,5 +25,9 @@ public class PaniActivity extends AppCompatActivity {
             String j =(String) b.get("name");
             imie.setText(j);
         }
+    }
+
+    public void dalejResultPani(View view){
+
     }
 }

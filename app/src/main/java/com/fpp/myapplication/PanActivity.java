@@ -40,5 +40,8 @@ public class PanActivity extends AppCompatActivity {
         Intent intentresultpan = new Intent(PanActivity.this, ResultActivity.class);
         intentresultpan.putExtra("name", imieS);
         intentresultpan.putExtra("surname", nazwiskoS);
+        intentresultpan.putExtra("plec", "Pan");
+
+        startActivity(intentresultpan);
     }
 }

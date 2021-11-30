@@ -30,14 +30,19 @@ public class PaniActivity extends AppCompatActivity {
 
     public void dalejResultPani(View view){
         EditText nazwisko = findViewById(R.id.nazwisko);
+        EditText nazwiskoP = findViewById(R.id.nazwiskopanienskie);
         imie = findViewById(R.id.imie);
 
         String nazwiskoS = nazwisko.getText().toString();
         String imieS = imie.getText().toString();
+        String nazwiskoPS = nazwiskoP.getText().toString();
 
-        Intent intentresultpan = new Intent(PaniActivity.this, ResultActivity.class);
-        intentresultpan.putExtra("name", imieS);
-        intentresultpan.putExtra("surname", nazwiskoS);
+        Intent intentresultpani = new Intent(PaniActivity.this, ResultActivity.class);
+        intentresultpani.putExtra("name", imieS);
+        intentresultpani.putExtra("surname", nazwiskoS);
+        intentresultpani.putExtra("plec", "Pani");
+        intentresultpani.putExtra("panienskie", nazwiskoPS);
 
+        startActivity(intentresultpani);
     }
 }
